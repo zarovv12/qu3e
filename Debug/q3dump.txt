@@ -1,0 +1,362 @@
+// Ensure 64/32-bit memory compatability with the dump contents
+assert( sizeof( int* ) == 4 );
+scene.SetGravity( q3Vec3( 0.000000000000000, -9.800000190734863, 0.000000000000000 ) );
+scene.SetAllowSleep( true );
+scene.SetEnableFriction( true );
+q3Body** bodies = (q3Body**)q3Alloc( sizeof( q3Body* ) * 4 );
+{
+	q3BodyDef bd;
+	bd.bodyType = q3BodyType( 1 );
+	bd.position.Set( r32( -1.389222145080566 ), r32( -3.410208940505981 ), r32( 1.129235506057739 ) );
+	bd.axis.Set( r32( 0.112403549253941 ), r32( 0.559290349483490 ), r32( 0.821315467357636 ) );
+	bd.angle = r32( 0.536730706691742 );
+	bd.linearVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angularVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.gravityScale = r32( 1.000000000000000 );
+	bd.layers = 1;
+	bd.allowSleep = bool( 4 );
+	bd.awake = bool( 0 );
+	bd.awake = bool( 0 );
+	bd.lockAxisX = bool( 0 );
+	bd.lockAxisY = bool( 0 );
+	bd.lockAxisZ = bool( 0 );
+	bodies[ 0 ] = scene.CreateBody( bd );
+
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 5.535294532775879 ), r32( 2.399975538253784 ), r32( 5.277382850646973 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 8.354746818542481 ), r32( 2.601031541824341 ), r32( 2.722159385681152 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 6.238440990447998 ), r32( 8.395123481750488 ), r32( 8.895291328430176 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 2.379101037979126 ), r32( 7.148686408996582 ), r32( 9.699514389038086 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 1.633381128311157 ), r32( 4.839015007019043 ), r32( 3.727439165115356 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.236030101776123 ), r32( 9.146060943603516 ), r32( 2.274178266525269 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 9.546250343322754 ), r32( 2.327463626861572 ), r32( 5.543259620666504 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.297830104827881 ), r32( 1.571855783462524 ), r32( 5.427076339721680 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 6.915769100189209 ), r32( 2.520828962326050 ), r32( 4.110049724578857 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.763939380645752 ), r32( 9.909909248352051 ), r32( 5.653950691223145 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 8.225928306579590 ), r32( 4.826380252838135 ), r32( 3.025940656661987 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 2.363994121551514 ), r32( 4.252052307128906 ), r32( 6.151646614074707 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 6.480697154998779 ), r32( 7.615069866180420 ), r32( 4.467116355895996 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 6.391430377960205 ), r32( 1.974517107009888 ), r32( 7.699942111968994 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 9.542405128479004 ), r32( 5.121646881103516 ), r32( 5.216132164001465 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.693624973297119 ), r32( 2.848231554031372 ), r32( 5.364452362060547 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.538437843322754 ), r32( 8.538498878479004 ), r32( 7.220648765563965 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 6.291177272796631 ), r32( 3.456068515777588 ), r32( 3.482985973358154 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 9.269111633300781 ), r32( 1.079103946685791 ), r32( 1.505935907363892 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 7.094851493835449 ), r32( 1.833613038063049 ), r32( 4.382793903350830 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+}
+
+{
+	q3BodyDef bd;
+	bd.bodyType = q3BodyType( 0 );
+	bd.position.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.axis.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angle = r32( 0.000000000000000 );
+	bd.linearVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angularVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.gravityScale = r32( 1.000000000000000 );
+	bd.layers = 1;
+	bd.allowSleep = bool( 4 );
+	bd.awake = bool( 0 );
+	bd.awake = bool( 0 );
+	bd.lockAxisX = bool( 0 );
+	bd.lockAxisY = bool( 0 );
+	bd.lockAxisZ = bool( 0 );
+	bodies[ 1 ] = scene.CreateBody( bd );
+
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		sd.Set( boxTx, q3Vec3( r32( 50.000000000000000 ), r32( 1.000000000000000 ), r32( 50.000000000000000 ) ) );
+		bodies[ 1 ]->AddBox( sd );
+	}
+}
+
+q3Free( bodies );

@@ -1,0 +1,107 @@
+// Ensure 64/32-bit memory compatability with the dump contents
+assert( sizeof( int* ) == 4 );
+scene.SetGravity( q3Vec3( 0.000000000000000, -9.800000190734863, 0.000000000000000 ) );
+scene.SetAllowSleep( true );
+scene.SetEnableFriction( true );
+q3Body** bodies = (q3Body**)q3Alloc( sizeof( q3Body* ) * 4 );
+{
+	q3BodyDef bd;
+	bd.bodyType = q3BodyType( 1 );
+	bd.position.Set( r32( 0.794771671295166 ), r32( -1.687193512916565 ), r32( -0.688889980316162 ) );
+	bd.axis.Set( r32( 0.663921833038330 ), r32( 0.057084016501904 ), r32( 0.745619654655457 ) );
+	bd.angle = r32( 0.708040356636047 );
+	bd.linearVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angularVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.gravityScale = r32( 1.000000000000000 );
+	bd.layers = 1;
+	bd.allowSleep = bool( 4 );
+	bd.awake = bool( 0 );
+	bd.awake = bool( 0 );
+	bd.lockAxisX = bool( 0 );
+	bd.lockAxisY = bool( 0 );
+	bd.lockAxisZ = bool( 0 );
+	bodies[ 0 ] = scene.CreateBody( bd );
+
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 4.280068397521973 ), r32( 1.822626352310181 ), r32( 1.134861350059509 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 3.735953807830811 ), r32( 5.621814727783203 ), r32( 7.394513130187988 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 8.730491638183594 ), r32( 2.566972970962524 ), r32( 7.719443321228027 ) );
+		sd.Set( boxTx, q3Vec3( r32( 1.000000000000000 ), r32( 1.000000000000000 ), r32( 1.000000000000000 ) ) );
+		bodies[ 0 ]->AddBox( sd );
+	}
+}
+
+{
+	q3BodyDef bd;
+	bd.bodyType = q3BodyType( 0 );
+	bd.position.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.axis.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angle = r32( 0.000000000000000 );
+	bd.linearVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.angularVelocity.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+	bd.gravityScale = r32( 1.000000000000000 );
+	bd.layers = 1;
+	bd.allowSleep = bool( 4 );
+	bd.awake = bool( 0 );
+	bd.awake = bool( 0 );
+	bd.lockAxisX = bool( 0 );
+	bd.lockAxisY = bool( 0 );
+	bd.lockAxisZ = bool( 0 );
+	bodies[ 1 ] = scene.CreateBody( bd );
+
+	{
+		q3BoxDef sd;
+		sd.SetFriction( r32( 0.400000005960464 ) );
+		sd.SetRestitution( r32( 0.000000000000000 ) );
+		sd.SetDensity( r32( 1.000000000000000 ) );
+		sd.SetSensor( bool( 0 ) );
+		q3Transform boxTx;
+		q3Vec3 xAxis( r32( 1.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 yAxis( r32( 0.000000000000000 ), r32( 1.000000000000000 ), r32( 0.000000000000000 ) );
+		q3Vec3 zAxis( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 1.000000000000000 ) );
+		boxTx.rotation.SetRows( xAxis, yAxis, zAxis );
+		boxTx.position.Set( r32( 0.000000000000000 ), r32( 0.000000000000000 ), r32( 0.000000000000000 ) );
+		sd.Set( boxTx, q3Vec3( r32( 50.000000000000000 ), r32( 1.000000000000000 ), r32( 50.000000000000000 ) ) );
+		bodies[ 1 ]->AddBox( sd );
+	}
+}
+
+q3Free( bodies );
